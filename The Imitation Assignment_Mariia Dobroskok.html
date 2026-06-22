@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Image Project</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f3f4f8;
+    min-height:100vh;
+    padding:40px 20px;
+    color:#212121;
+}
+
+.page-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.page-title h1{
+    font-size:2rem;
+    letter-spacing:0.05em;
+}
+
+.page-title p{
+    color:#555;
+    margin-top:10px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap:24px;
+    max-width:1240px;
+    margin:0 auto;
+}
+
+.project{
+    background:white;
+    padding:14px;
+    border-radius:18px;
+    box-shadow:0 18px 40px rgba(15,20,40,0.08);
+    overflow:hidden;
+}
+
+.project figure{
+    position:relative;
+    margin:0;
+}
+
+.project img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:14px;
+}
+
+figcaption{
+    margin-top:14px;
+    font-weight:700;
+    font-size:0.96rem;
+    color:#1d1d1d;
+}
+
+.project p{
+    margin-top:8px;
+    font-size:0.9rem;
+    line-height:1.4;
+    color:#5a5a5a;
+}
+
+/* 1. Black & White Butterfly */
+.img1{
+    filter:grayscale(100%) contrast(125%) brightness(95%);
+}
+
+/* 2. Sepia Dinosaur */
+.img2{
+    filter:sepia(90%) saturate(220%) contrast(110%) brightness(95%);
+}
+
+/* 3. Blurred Penguins */
+.img3{
+    filter:blur(4px) brightness(90%);
+}
+
+/* 4. High Contrast Seagull */
+.img4{
+    filter:contrast(220%) saturate(140%) brightness(110%);
+}
+
+/* 5. Football Field + Tic-Tac-Toe Overlay */
+.field{
+    position:relative;
+    overflow:hidden;
+    border-radius:14px;
+}
+
+.field img{
+    width:100%;
+    display:block;
+    filter:contrast(120%) saturate(140%);
+}
+
+.field::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:url("tic-tac-toe.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+    opacity:0.82;
+    pointer-events:none;
+}
+
+/* 6. Bright Stage */
+.img6{
+    filter:brightness(140%) saturate(130%) contrast(115%);
+    transform:scale(1.02);
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="page-title">
+    <h1>The Imitation Assignment</h1>
+    <p>Replicating the six image projects using only HTML and CSS filters.</p>
+</header>
+
+<section class="gallery">
+    <article class="project">
+        <figure>
+            <img class="img1" src="butterfly.jpg" alt="Black and white butterfly">
+            <figcaption>Black & White Butterfly</figcaption>
+        </figure>
+        <p>Grayscale filter with increased contrast makes the butterfly image look like the assignment example.</p>
+    </article>
+
+    <article class="project">
+        <figure>
+            <img class="img2" src="dinosaur.png" alt="Sepia dinosaur">
+            <figcaption>Sepia Dinosaur</figcaption>
+        </figure>
+        <p>Sepia and saturation filters create an aged, warm-toned dinosaur image.</p>
+    </article>
+
+    <article class="project">
+        <figure>
+            <img class="img3" src="penguins.jpg" alt="Blurred penguins">
+            <figcaption>Blurred Penguins</figcaption>
+        </figure>
+        <p>The penguin photo is softened with blur to match the assignment style without modifying the source image file.</p>
+    </article>
+
+    <article class="project">
+        <figure>
+            <img class="img4" src="seagull.png" alt="High contrast seagull">
+            <figcaption>High Contrast Seagull</figcaption>
+        </figure>
+        <p>A strong contrast filter makes the seagull image stand out with a dramatic look.</p>
+    </article>
+
+    <article class="project">
+        <figure class="field">
+            <img src="football_field.jpg" alt="Football field with tic tac toe overlay">
+        </figure>
+        <figcaption>Football Field + Tic-Tac-Toe</figcaption>
+        <p>The football field includes a CSS overlay using the required tic-tac-toe image.</p>
+    </article>
+
+    <article class="project">
+        <figure>
+            <img class="img6" src="theater_stage.jpg" alt="Bright stage">
+            <figcaption>Bright Stage</figcaption>
+        </figure>
+        <p>Brightness and saturation effects give the stage a vivid spotlight appearance.</p>
+    </article>
+</section>
+
+</body>
+</html>
