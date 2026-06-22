@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="investTitle">
+  <title id="investTitle">Investment Video Placeholder</title>
+  <defs>
+    <linearGradient id="investBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eef3ff" />
+      <stop offset="100%" stop-color="#eef7f9" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="40" fill="url(#investBg)" />
+  <polygon points="480,240 760,360 480,480" fill="#0f2c59" opacity="0.9" />
+  <circle cx="620" cy="360" r="164" fill="#0f2c59" opacity="0.1" />
+  <rect x="160" y="120" width="880" height="320" rx="32" fill="#ffffff" opacity="0.88" />
+  <text x="260" y="520" fill="#0f2c59" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="700">Video preview unavailable offline</text>
+</svg>
